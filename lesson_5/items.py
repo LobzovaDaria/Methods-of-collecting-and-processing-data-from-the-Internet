@@ -6,7 +6,8 @@
 import scrapy
 
 
-class Lesson5Item(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+class ProjectParserHhItem(scrapy.Item):
+    name = scrapy.Field()
+    salary = scrapy.Field()
+    url = scrapy.Field()
+    _id = scrapy.Field()

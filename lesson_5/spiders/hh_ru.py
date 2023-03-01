@@ -1,6 +1,6 @@
 import scrapy
 from scrapy.http import HtmlResponse
-from project_parser_hh.items import ProjectParserHhItem
+from lesson_5.items import ProjectParserHhItem
 
 
 class HhRuSpider(scrapy.Spider):
@@ -9,7 +9,7 @@ class HhRuSpider(scrapy.Spider):
     start_urls = ["https://kaluga.hh.ru/search/vacancy?no_magic=true&L_save_area=true&text=Python&excluded_text=&area=88&area=43&salary=&currency_code=RUR&experience=doesNotMatter&order_by=relevance&search_period=0&items_on_page=20"]
 
 
- def parse(self, response: HtmlResponse):
+    def parse(self, response: HtmlResponse):
         next_page = response.xpath("//a[@data-qa='pager-next']/@href").get()
 
         if next_page:
